@@ -1,0 +1,89 @@
+
+.title-container{
+  display: flex;
+  justify-content: center;
+  background-color: #242C3C;
+  padding: 20px;
+}
+
+h1{
+  margin: 0 auto;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.noticias{
+  width: 90%;
+}
+.imagen__new{
+  max-width: 40%;
+}
+
+.cont-img{
+  display: flex;
+  justify-content: center;
+}
+
+.noticia__individu{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formulario{
+  border: solid 1px #83B8C1 ;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.input-datos{
+  margin-bottom: 25px;
+  background-color: #019CB8;
+  padding: 5px;
+  border-radius: 9px;
+  border: none;
+
+}
+
+.input-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.input-container label{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #019CB8;
+  border: solid 1px 242C3C;
+}
+::placeholder { color: rgba(255, 255, 255, 0.589); }
+
+.date-new{
+  margin: 5px 100px 0 ;
+  text-align: right;
+}
+
+.input-fecha{
+  max-width:  100%;
+}

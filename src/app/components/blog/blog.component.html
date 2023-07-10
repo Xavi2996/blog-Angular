@@ -1,1 +1,72 @@
-<p>blog works!</p>
+<div class="title-container">
+  <h1>BLOG DE TECNOLOGÍA</h1>
+</div>
+
+<div class="container">
+  <div class="formulario-container">
+    <div class="formulario">
+      <div class="input-container">
+        <label for="titulo">Título</label>
+        <input
+          class="input-datos input-titulo"
+          type="text"
+          id="titulo"
+          placeholder="Titulo de Noticia"
+          [(ngModel)]="noticia.title"
+        />
+      </div>
+      <div class="input-container">
+        <label for="url">Url de imagen</label>
+        <input
+          class="input-datos input-imagen"
+          type="text"
+          id="url"
+          placeholder="Título de Imagen"
+          [(ngModel)]="noticia.image"
+        />
+      </div>
+
+      <div class="input-container input-fecha">
+        <label for="fecha">Fecha de publicación</label>
+        <input
+          class="input-datos"
+          type="date"
+          id="fecha"
+          placeholder="Fecha de publicación"
+          [(ngModel)]="noticia.date"
+        />
+      </div>
+
+      <div class="input-container">
+        <label for="contenido">Contenido</label>
+        <textarea
+          name="contenido"
+          id="contenido"
+          cols="30"
+          rows="10"
+          class="input-datos input-contenido"
+          [(ngModel)]="noticia.text"
+          placeholder="Noticia"
+        ></textarea>
+      </div>
+      <div class="container-btn">
+        <button class="btn" (click)="agegarNoticia()">Publicar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="noticias">
+    <div class="noticia__individual" *ngFor="let noticia of noticias">
+      <h2 class="titulo">
+        {{ noticia.title }}
+      </h2>
+      <div class="cont-img">
+        <img src="{{ noticia.image }}" alt="" class="imagen__new" />
+      </div>
+      <p class="date-new">Fechas de publicación: {{ noticia.date }}</p>
+      <p class="text-new">
+        {{ noticia.text }}
+      </p>
+    </div>
+  </div>
+</div>
